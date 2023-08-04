@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: Karla;
+    src: url(../fonts/Karla-Regular.ttf);
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+#content-container{
+    --padding: 0;
+    --gap: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: var(--padding);
+    width: 100vw;
+    height: 100vh;
+    font-family: Pacifico, serif;
+    background-color: rgba(65, 70, 83);
+    background-image: url(../../images/Backgrounds/background-3.jpg);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#nice-clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 447px;
+    align-self: center;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+#greeting-container{
+    color: #fff;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+}
+#greeting{
+    margin: 0;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+.language-selectors-container{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+    margin: 0 0 0 -1px;
+    font-family: Karla, serif;
+}
+.language-selectors-container .language-selector{
+    padding: 0 .5em;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    color: #888;
+    cursor: pointer;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+.language-selectors-container .language-selector:hover{
+    color: #aaa;
+}
+.language-selectors-container .language-selector.active{
+    color: #fff;
+}
+.language-selectors-container .language-selector:first-child{
+    border-left: unset;
+    padding-left: 0;
+}
+.language-selectors-container .language-selector:last-child{
+    padding-right: 0;
+}
+@media screen and (min-width: 992px) {
+    #content-container{
+        --padding: 6rem;
+        --gap: 6rem;
+    }
+    #header {
+        flex-direction: row;
+    }
+    #footer{
+        justify-content: flex-end;
+    }
+}

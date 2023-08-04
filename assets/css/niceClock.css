@@ -1,0 +1,48 @@
+@font-face {
+    font-family: CourierPrime;
+    src: url(../fonts/CourierPrime-Regular.ttf);
+}
+.nice-clock-words-container{
+    --spacing: .3em;
+    --padding: 2em;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    width: 100%;
+    letter-spacing: var(--spacing);
+    row-gap: var(--spacing);
+    column-gap: calc(var(--spacing) * 3);
+    padding: var(--padding);
+    text-transform: uppercase;
+    font-family: CourierPrime, monospace;
+    background-color: #333;
+    color: #555;
+    box-shadow: #343434 0 0 7px 10px;
+    user-select: none;
+}
+.nice-clock-words-container .dummy-text-container{
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    gap: inherit;
+    flex-wrap: wrap;
+    width: calc(100% - (var(--padding) * 2));
+    z-index: 1;
+}
+.nice-clock-words-container .dummy-text-container .dummy-text{
+    margin: 0;
+}
+.nice-clock-words-container .nice-clock-word{
+    color: inherit;
+    background-color: inherit;
+    position: relative;
+    z-index: 2;
+}
+.nice-clock-words-container .nice-clock-word.active{
+    color: #eee;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 15px #0fa;
+}
